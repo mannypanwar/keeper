@@ -103,6 +103,12 @@ form.create-note button {
   outline: none;
 }
 
+.note-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 @media only screen and (max-width: 600px) {
   form.create-note {
     width: auto;
