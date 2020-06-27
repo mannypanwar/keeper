@@ -1,5 +1,4 @@
 import React from "react";
-import DeleteIcon from "@material-ui/icons/Delete";
 
 function Note(props) {
   function handleClick() {
@@ -11,7 +10,7 @@ function Note(props) {
       <h1>{props.title}</h1>
       <p>{props.content}</p>
       <button onClick={handleClick}>
-        <DeleteIcon />
+        <i style={{ fontSize: "1rem" }} class="fas fa-trash-alt"></i>
       </button>
     </div>
   );

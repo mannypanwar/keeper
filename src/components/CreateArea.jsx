@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import AddIcon from "@material-ui/icons/Add";
 import { Fab, Zoom } from "@material-ui/core";
 
 function CreateArea(props) {
   const [note, setNote] = useState({
     title: "",
-    content: ""
+    content: "",
   });
 
   const [isExpanded, setExpand] = useState(false);
@@ -13,10 +12,10 @@ function CreateArea(props) {
   function handleChange(event) {
     const { name, value } = event.target;
 
-    setNote(prevNote => {
+    setNote((prevNote) => {
       return {
         ...prevNote,
-        [name]: value
+        [name]: value,
       };
     });
   }
@@ -25,7 +24,7 @@ function CreateArea(props) {
     props.onAdd(note);
     setNote({
       title: "",
-      content: ""
+      content: "",
     });
     event.preventDefault();
   }
@@ -57,7 +56,7 @@ function CreateArea(props) {
 
         <Zoom in={isExpanded}>
           <Fab onClick={submitNote}>
-            <AddIcon />
+            <i class="fas fa-plus"></i>
           </Fab>
         </Zoom>
       </form>
