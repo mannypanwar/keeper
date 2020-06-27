@@ -67,6 +67,7 @@ footer p {
   height: 36px;
   cursor: pointer;
   outline: none;
+  border-radius: 50%;
 }
 
 form.create-note {
